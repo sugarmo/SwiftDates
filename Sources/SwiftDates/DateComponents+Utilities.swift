@@ -5,19 +5,19 @@ import Foundation
 /// Components
 public extension Date {
     /// Returns set of common date components
-    public static var commonComponents: Set<Calendar.Component> = [.year, .month, .day, .hour, .minute, .second]
+    static var commonComponents: Set<Calendar.Component> = [.year, .month, .day, .hour, .minute, .second]
     
     /// Returns set of exhaustive date components
-    public static var allComponents: Set<Calendar.Component> = [.era, .year, .month, .day, .hour, .minute, .second, .weekday, .weekdayOrdinal, .quarter, .weekOfMonth, .weekOfYear, .yearForWeekOfYear, .nanosecond, .calendar, .timeZone]
+    static var allComponents: Set<Calendar.Component> = [.era, .year, .month, .day, .hour, .minute, .second, .weekday, .weekdayOrdinal, .quarter, .weekOfMonth, .weekOfYear, .yearForWeekOfYear, .nanosecond, .calendar, .timeZone]
     
     /// Returns set of MDY date components
-    public static var dateComponents: Set<Calendar.Component> = [.year, .month, .day]
+    static var dateComponents: Set<Calendar.Component> = [.year, .month, .day]
     
     /// Returns set of HMS
-    public static var timeComponents: Set<Calendar.Component> = [.hour, .minute, .second, ]
+    static var timeComponents: Set<Calendar.Component> = [.hour, .minute, .second, ]
     
     /// Returns set of MDYHMS components
-    public static var dateAndTimeComponents: Set<Calendar.Component> = [.hour, .minute, .second, .year, .month, .day]
+    static var dateAndTimeComponents: Set<Calendar.Component> = [.hour, .minute, .second, .year, .month, .day]
 }
 
 /// Components from Dates
@@ -39,10 +39,10 @@ public extension Date {
     }
     
     /// Extracts common date components for date
-    public var components: DateComponents { return Date.sharedCalendar.dateComponents(Date.commonComponents, from: self) }
+    var components: DateComponents { return Date.sharedCalendar.dateComponents(Date.commonComponents, from: self) }
     
     /// Extracts all date components for date
-    public var allComponents: DateComponents { return Date.sharedCalendar.dateComponents(Date.allComponents, from: self) }
+    var allComponents: DateComponents { return Date.sharedCalendar.dateComponents(Date.allComponents, from: self) }
 }
 
 

@@ -1,11 +1,8 @@
-# Temporary files.
-*~
-
-# Xcode user data.
-xcuserdata
-
-# Finder metadata
 .DS_Store
-
-# Built site content.
-/_site
+/.build
+/Packages
+xcuserdata/
+DerivedData/
+.swiftpm/configuration/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.netrc
